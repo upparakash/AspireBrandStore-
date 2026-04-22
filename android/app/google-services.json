@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "561081379745",
+    "project_id": "aspirebrand-2f47a",
+    "storage_bucket": "aspirebrand-2f47a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561081379745:android:61e37959ffe9684d3ab9e0",
+        "android_client_info": {
+          "package_name": "com.aspirebrand"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "561081379745-ojjbmqqj5f4ihsh79hkdfj4shms9alq7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aspirebrand",
+            "certificate_hash": "5a724f7d2fe5cc9a65c30e78c312cc55b3242f1f"
+          }
+        },
+        {
+          "client_id": "561081379745-l3nn2ak9houo6sraqt32uhg18tmi39sm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQvZ1tR9X72HhAFUWyEltIirBhc0teTD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "561081379745-l3nn2ak9houo6sraqt32uhg18tmi39sm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,17 +4,51 @@ buildscript {
         minSdkVersion = 24
         compileSdkVersion = 36
         targetSdkVersion = 36
-        ndkVersion = "27.1.12297006"
-        kotlinVersion = "2.1.20"
+        ndkVersion = "28.0.12433566"
+        kotlinVersion = "1.9.24" // stable for RN 0.81.x
     }
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle")
+        classpath("com.android.tools.build:gradle:8.5.2")
         classpath("com.facebook.react:react-native-gradle-plugin")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+         classpath 'com.google.gms:google-services:4.3.14' //paste this line
+    }
+}
+
+/**
+ * Repositories for ALL modules (app + node_modules)
+ */
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+
+        // PhonePe SDK repo
+        maven {
+            url "https://phonepe.mycloudrepo.io/public/repositories/phonepe-intentsdk-android"
+        }
+    }
+}
+
+/**
+ *  FIX react-native-video / library lint crash
+ */
+subprojects {
+    afterEvaluate { project ->
+        if (project.plugins.hasPlugin("com.android.library") ||
+            project.plugins.hasPlugin("com.android.application")) {
+
+            project.android {
+                lint {
+                    abortOnError false
+                    checkReleaseBuilds false
+                }
+            }
+        }
     }
 }
 
